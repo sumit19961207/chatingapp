@@ -30,6 +30,7 @@ app.get("/", (req, res) => {
     res.status(200).send("Hello TheWebDev");
 });
 
+// postrequest
 app.post("/dating/cards", (req, res)=>{
    const dbCard = req.body;
    Cards.create(dbCard, (err, data)=>{
@@ -41,7 +42,7 @@ app.post("/dating/cards", (req, res)=>{
    })
 })
 
-
+// getrequest
 app.get("/dating/cards", (req, res) => {
     Cards.find((err,data)=>{
         if(err){
